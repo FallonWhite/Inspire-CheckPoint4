@@ -1,1 +1,6 @@
 /* BASIC STYLES HERE */
+.rain {
+  background-image: url('../img/rain.gif');
+  background-position: center;
+  background-size: cover;
+}

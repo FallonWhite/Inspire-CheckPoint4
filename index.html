@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <title>Inspire-CheckPoint4</title>
@@ -15,21 +19,85 @@
 <body>
     <header>
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">Inspire-CheckPoint4</span>
+            <a class="navbar-brand" href="#" id="weather">
+                <span class="m-2">Inspire</span>
             </a>
         </nav>
     </header>
     <main class="container">
         <div id="app"></div>
+
+        //weather, clock, and greeting code//
+        <div class="row d-flex justify-content-end">
+            <div class="col-md-1 d-flex justify-content-end flex-column align-items-end mt-3 mr-3" id="weather">
+                <i class="fa fa-cloud-moon-rain d-flex "></i>
+                <h5 class="m-0">80 </h5>
+                </fa>
+                <h5>Weather</h5>
+            </div>
+        </div>
+
+        <div class="row d-flex">
+            <div class="col-12">
+                <div class="row d-flex">
+                    <div class="col-4 d-flextext-center">
+                        <h2><span id="clock">2:10:00</span></h2>
+                        <h4>Guten abend mein freund <br> Good Afternoon, my friend</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex">
+            <div class="col-4 d-flex text-center" id="greeting">
+                <h5>Wie gehts?<br>How's it going?</h5>
+                <input type="text">
+            </div>
+        </div>
+        //bg img, quote, and to-do list//
+        <div class="row">
+            <div class="col-2">
+                <p><i><b>Location</b></i></p>
+                <p><i>Artist</i></p>
+            </div>
+
+            <div class="col-5">
+                <p>Quote the Raven</p>
+                <p>POE</p>
+            </div>
+
+            <div class="col-4 rain">
+                <h4 style="color: maroon; text-shadow: 1px 1px darkblue">To-Do List</h4>
+                <div class="row bg-dark">
+                    <div class="col-12 d-flex justify-content-center text-center" id="checkboxes">
+                        <ul class="row d-flex flex-wrap text-wrap m-1" id="tasks">
+                        </ul>
+                    </div>
+                </div>
+                <div class="row d-flex bg-dark">
+
+                    <form class="w-90 col-12 p-0" onsubmit="app.tasksController.addTask()">
+                        <div class="d-flex m-1 ">
+                            <input class="w-90" type="text" name="task" placeholder="Enter your new task..." id="task"
+                                required minlength="" maxlength="">
+                            <button class="btn btn-outline-primary shadow-light m-1 justify-content-center"
+                                type="submit"><b>+</b></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">
-            <p><small>Made with love by Codeworks</small></p>
+            <p><small>Made by Fallon</small></p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 
