@@ -5,7 +5,15 @@ class TasksService {
   addTask() {
     ProxyState.tasks = [...ProxyState.tasks, new Task("")]
   }
+  removeTask(id) {
+    ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
+  }
+  destroy(id) {
+    ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
+  }
 }
 
-export const tasksService = new TasksService();
+export const tasksService = new TasksService()
+
+
 
