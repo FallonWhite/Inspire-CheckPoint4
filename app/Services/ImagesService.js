@@ -6,6 +6,7 @@ class ImagesService {
   constructor() {
     this.getImage()
   }
+
   async getImage() {
     let res = await imagesApi.get('')
     ProxyState.images = new Image(res.data);

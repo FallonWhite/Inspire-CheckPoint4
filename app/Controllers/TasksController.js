@@ -14,7 +14,7 @@ function _draw() {
 //Public
 export default class TasksController {
   constructor() {
-    ProxyState.on("tasks", _draw);
+    ProxyState.on("tasks", _draw, saveState);
 
     loadState()
   }
