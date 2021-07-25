@@ -4,3 +4,39 @@
   background-position: center;
   background-size: cover;
 }
+
+#image{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#clock {
+  position: center;
+  font-size: 175px;
+  width: 900px;
+  margin: 200px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.quoteText{
+  .quoteBody {
+    color: black;
+    text-shadow: 1px 1px white, 0 0 20px gray;
+  }
+}
+
+.hide {
+  color: transparent;
+  transition: all 1s ease-in;
+}
+
+.quote:hover + .hide {
+  cursor: pointer;
+  display: block;
+  color: black;
+  text-shadow: 1px 1px white, 0 0 20px maroon;
+}
