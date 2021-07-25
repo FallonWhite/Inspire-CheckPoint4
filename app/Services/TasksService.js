@@ -5,7 +5,7 @@ import { tasksApi } from "./AxiosService.js";
 class TasksService {
   async setTasks(name) {
     const res = await tasksApi.push('task')
-    ProxyState.tasks = new Task(res.data)
+    ProxyState.tasks = new Task[(res.data)]
     console.log(ProxyState.tasks)
   }
   addTask() {
@@ -16,6 +16,9 @@ class TasksService {
   }
   destroy(id) {
     ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
+  }
+  toggledTaskSelection(id) {
+    ProxyState.tasks = [...ProxyState.tasks]
   }
 
   async postToSandbox() {
