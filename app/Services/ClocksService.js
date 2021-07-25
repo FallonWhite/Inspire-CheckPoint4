@@ -1,8 +1,7 @@
 import { ProxyState } from "../AppState.js";
 import Clock from "../Models/Clock.js"
-import { api } from "./AxiosService.js"
 
-class ClockService {
+class ClocksService {
   async getAllClock(url = '') {
 
     const res = await api.get(url)
