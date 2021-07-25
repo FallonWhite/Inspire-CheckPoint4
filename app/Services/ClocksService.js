@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import Task from "../Models/Task.js"
+import Clock from "../Models/Clock.js"
 import { api } from "./AxiosService.js"
 
 class ClockService {
@@ -12,10 +12,8 @@ class ClockService {
     ProxyState.next = res.data.next
     ProxyState.previous = res.data.previous
 
-    let myth = res.data.results.map(m => new Myth(m))
-    ProxyState.myths = myth
+    let clock = res.data.results.map(c => new Clock(c))
+    ProxyState.clocks = clock
   }
-
-
 }
-export const mythsService = new MythsService()
+export const clocksService = new ClocksService()

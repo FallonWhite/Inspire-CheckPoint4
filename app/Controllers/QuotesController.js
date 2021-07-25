@@ -13,6 +13,7 @@ export default class quotesController {
   constructor() {
     ProxyState.on('quotes', _drawAll)
     quotesService.getAllQuotes()
+    this.getNewQuote()
   }
 
   async getAllQuotes() {

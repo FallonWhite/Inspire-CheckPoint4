@@ -1,5 +1,6 @@
 import Task from "./Models/Task.js"
 import Image from "./Models/Image.js"
+import Weather from "./Models/Weather.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
