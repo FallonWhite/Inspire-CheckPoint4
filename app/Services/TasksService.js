@@ -3,7 +3,7 @@ import Task from "../Models/Task.js";
 import { tasksApi } from "./AxiosService.js";
 
 class TasksService {
-  async setTasks(name) {
+  async setTasks(Task) {
     const res = await tasksApi.push('task')
     ProxyState.tasks = new Task[(res.data)]
     console.log(ProxyState.tasks)
@@ -17,6 +17,8 @@ class TasksService {
   destroy(id) {
     ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
   }
+
+  //need to figure out toggle feature//
   toggledTaskSelection(id) {
     ProxyState.tasks = [...ProxyState.tasks]
   }
@@ -25,6 +27,8 @@ class TasksService {
     console.log(new Task(res.data))
   }
 
+
+  //update task to localStorage isn't working//
   updateTask(id) {
     if (localStorage.getItem(id) === 'checked') {
       localStorage.setItem(id, '')

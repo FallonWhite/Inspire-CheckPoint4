@@ -6,14 +6,13 @@ export default class Task {
         this.id = id
         this.name = name
         this.total = 1
-        this.checked = checked
+        this.checked = localStorage.getItem(this.id)
     }
 
     get Template() {
-        console.log(this.checked)
         return `
     <div class="${this.id}">
-    <input type="checkbox" style="background-color: ${this.name}" class="m-2" onclick="app.tasksController.checkbox('${this.id}')" ${this.checked ? 'checked' : ''}>
+    <input type="checkbox" class="m-2" onclick="app.tasksController.checkbox('${this.id}')" ${this.checked ? 'checked' : ''}>
     ${this.name} 
 <button type="destroy" class="btn btn-dark btn-outline-info btn-sm my-1 ml-5 pull-right" onclick="app.tasksController.removeTask('${this.id}')">Delete</button>`
     }

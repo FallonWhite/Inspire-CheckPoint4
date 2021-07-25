@@ -31,9 +31,11 @@ export default class TasksController {
     form.reset()
   }
 
+
+  //NEED to get toggle to work. Boolean can't be 'string'. The below si a placeholder for the taskToggle//
   toggledTaskSelection(taskId) {
     console.log(taskId, ProxyState.tasks)
-    const existingTask = ProxyState.tasks.find(t => t.id === taskId)
+    const existingTask = ProxyState.tasks.find(t => t.id == taskId)
     existingTask.checked = !existingTask.checked
     tasksService.toggledTaskSelection()
   }
