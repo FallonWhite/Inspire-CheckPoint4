@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 
+
 export default class Task {
     constructor({ name, id, checked }) {
         this.id = id

@@ -18,15 +18,15 @@ export default class TasksController {
     _draw()
   }
 
-  addTask(id) {
+  addTask() {
     event.preventDefault()
     let form = event.target
-    let rawTask = {
-      id,
+    let newTask = {
+
       // @ts-ignore
       name: form.task.value,
     }
-    tasksService.addTask(rawTask)
+    tasksService.addTask(newTask)
     // @ts-ignore
     form.reset()
   }
