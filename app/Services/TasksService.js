@@ -9,7 +9,7 @@ class TasksService {
     console.log(ProxyState.tasks)
   }
   addTask(newTask) {
-    ProxyState.tasks = [...ProxyState.tasks, Task(newTask)]
+    ProxyState.tasks = [...ProxyState.tasks, new Task(newTask)]
   }
   removeTask(id) {
     ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)

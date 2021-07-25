@@ -13,9 +13,9 @@ export default class Task {
         console.log(this.checked)
         return `
     <div class="${this.id}">
-    <input type="checkbox" style="background-color: ${this.name}" class="mr-2" onclick="app.tasksController.checkBox('${this.id}')" ${this.checked ? 'checked' : ''}>
+    <input type="checkbox" style="background-color: ${this.name}" class="m-2" onclick="app.tasksController.checkbox('${this.id}')" ${this.checked ? 'checked' : ''}>
     ${this.name} 
-<button type="destroy" class="btn btn-primary btn-outline-info btn-sm my-1 ml-5 pull-right" onclick="app.tasksController.removeTask('${this.id}')">Delete</button>`
+<button type="destroy" class="btn btn-dark btn-outline-info btn-sm my-1 ml-5 pull-right" onclick="app.tasksController.removeTask('${this.id}')">Delete</button>`
     }
 
     //to display task total//

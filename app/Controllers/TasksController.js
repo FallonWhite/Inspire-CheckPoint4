@@ -45,4 +45,18 @@ export default class TasksController {
   postToSandbox() {
     tasksService.postToSandbox()
   }
+
+  destroy(id) {
+    if (window.confirm("Confirm Delete?")) {
+      tasksService.destroy(id)
+    }
+  }
+  removeTask(id) {
+    if (window.confirm("Confirm Delete?")) {
+      tasksService.removeTask(id)
+    }
+  }
+  checkbox(id) {
+    tasksService.updateTask(id);
+  }
 }
