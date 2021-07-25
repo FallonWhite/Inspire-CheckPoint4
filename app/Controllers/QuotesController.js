@@ -2,23 +2,19 @@
 import { ProxyState } from "../AppState.js";
 import { quotesService } from "../Services/QuotesService.js";
 
-function _drawAll() {
-  const quotes = ProxyState.quotes
-  let template = ''
-  quotes.forEach(q => template += q.Template)
-  document.getElementById('quote').innerHTML = template
+function _draw() {
+  document.getElementById('quote').innerHTML = ProxyState.quotes.Template
 }
 
 export default class quotesController {
   constructor() {
-    ProxyState.on('quotes', _drawAll)
-    quotesService.getAllQuotes()
-    this.getNewQuote()
+    ProxyState.on('quotes', _draw);
+    this.getQuote()
   }
 
-  async getAllQuotes() {
+  async getQuote() {
     try {
-      await quotesService.getAllQuotes()
+      await quotesService.getQuote()
     } catch (error) {
       console.error(error)
     }
