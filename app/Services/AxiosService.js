@@ -1,4 +1,3 @@
-import Task from "../Models/Task"
 
 export const inspireApi = axios.create({
   baseURL: 'https://bcw-sandbox.herokuapp.com/api',
