@@ -13,6 +13,7 @@ class TasksService {
   }
   removeTask(id) {
     ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
+    localStorage.removeItem(id)
   }
   destroy(id) {
     ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
@@ -32,6 +33,7 @@ class TasksService {
   updateTask(id) {
     if (localStorage.getItem(id) === 'checked') {
       localStorage.setItem(id, '')
+      localStorage.removeItem(id)
     } else {
       localStorage.setItem(id, "checked")
     }

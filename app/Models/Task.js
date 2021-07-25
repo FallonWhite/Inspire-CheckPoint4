@@ -22,15 +22,14 @@ export default class Task {
     get MyTasks() {
         let template = ''
         let tasksTotal = 0
-        let tasks = ProxyState.tasks.filter(task => task.id === this.id)
-        tasks.forEach(t => {
-            template += t.Template
-            tasksTotal += t.total
-        })
+        let tasks = ProxyState.
+            tasks.forEach(t => {
+                template += t.Template
+            })
 
         if (!template) {
             template += "No tasks"
         }
-        return [template, tasksTotal]
+        return template
     }
 }
