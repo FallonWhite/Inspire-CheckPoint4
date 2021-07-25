@@ -21,19 +21,19 @@ export default class TasksController {
   addTask(id) {
     event.preventDefault()
     let form = event.target
-    let newTask = {
+    let rawTask = {
       id,
       // @ts-ignore
       name: form.task.value,
     }
-    tasksService.addTask()
+    tasksService.addTask(rawTask)
     // @ts-ignore
     form.reset()
   }
 
   toggledTaskSelection(taskId) {
     console.log(taskId, ProxyState.tasks)
-    const existingTask = ProxyState.tasks.find(x => x.id === taskId)
+    const existingTask = ProxyState.tasks.find(t => t.id === taskId)
     existingTask.checked = !existingTask.checked
     tasksService.toggledTaskSelection()
   }
