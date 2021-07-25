@@ -16,7 +16,7 @@ export default class TasksController {
   constructor() {
     ProxyState.on("tasks", _draw);
 
-    _draw()
+    loadState()
   }
 
   addTask() {
@@ -26,6 +26,7 @@ export default class TasksController {
 
       // @ts-ignore
       name: form.task.value,
+      checked: ""
     }
     tasksService.addTask(newTask)
     // @ts-ignore
@@ -61,5 +62,6 @@ export default class TasksController {
   }
   checkbox(id) {
     tasksService.updateTask(id);
+    loadState()
   }
 }

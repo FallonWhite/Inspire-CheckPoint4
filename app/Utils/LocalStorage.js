@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import Task from "../Models/Task.js";
+import Image from "../Models/Image.js";
 
 export function saveState() {
   localStorage.setItem('tasks', JSON.stringify({

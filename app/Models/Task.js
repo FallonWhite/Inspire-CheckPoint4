@@ -1,8 +1,9 @@
 import { ProxyState } from "../AppState.js"
+import { generateId } from "../Utils/GenerateId.js"
 
 
 export default class Task {
-    constructor({ name, id, checked }) {
+    constructor({ name, id = generateId() }) {
         this.id = id
         this.name = name
         this.total = 1
