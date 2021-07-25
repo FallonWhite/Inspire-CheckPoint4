@@ -30,4 +30,12 @@ export default class TasksController {
     // @ts-ignore
     form.reset()
   }
+
+  onPageLoad(id) {
+    // @ts-ignore
+    document.getElementById(id).checked = false
+  }
+  postToSandbox() {
+    tasksService.postToSandbox()
+  }
 }
