@@ -31,6 +31,13 @@ export default class TasksController {
     form.reset()
   }
 
+  toggledTaskSelection(taskId) {
+    console.log(taskId, ProxyState.tasks)
+    const existingTask = ProxyState.tasks.find(x => x.id === taskId)
+    existingTask.checked = !existingTask.checked
+    tasksService.toggledTaskSelection()
+  }
+
   onPageLoad(id) {
     // @ts-ignore
     document.getElementById(id).checked = false
