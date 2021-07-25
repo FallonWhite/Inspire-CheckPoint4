@@ -8,8 +8,8 @@ class TasksService {
     ProxyState.tasks = new Task[(res.data)]
     console.log(ProxyState.tasks)
   }
-  addTask() {
-    ProxyState.tasks = [...ProxyState.tasks, new Task()]
+  addTask(newTask) {
+    ProxyState.tasks = [...ProxyState.tasks, Task(newTask)]
   }
   removeTask(id) {
     ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
@@ -20,12 +20,18 @@ class TasksService {
   toggledTaskSelection(id) {
     ProxyState.tasks = [...ProxyState.tasks]
   }
-
   async postToSandbox() {
     const res = await tasksApi.post('tasks', ProxyState.tasks)
     console.log(new Task(res.data))
   }
+
+  updateTask(id) {
+    if (localStorage.getItem(id) === 'checked') {
+      localStorage.setItem(id, '')
+    } else {
+      localStorage.setItem(id, "checked")
+    }
+  }
 }
 export const tasksService = new TasksService()
-
 
