@@ -5,7 +5,7 @@ function _draw() {
   document.getElementById('weather').innerHTML = ProxyState.weathers.Template
 }
 
-export default class WeathersController {
+export default class weathersController {
   constructor() {
     ProxyState.on('weathers', _draw)
     this.getWeather()
