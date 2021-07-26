@@ -19,12 +19,15 @@ export default class WeathersController {
     }
   }
 
-  async toggle() {
-    try {
-      weathersService.toggle()
-    } catch (error) {
-      console.error(error)
-    }
-  }
+  //TOGGLE not working. commented out until I can get if/else staement built for display
+
+
+  //  async toggle() {
+  //   try {
+  //     weathersService.toggle()
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  //  }
 
 }
