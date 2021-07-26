@@ -35,6 +35,14 @@ body {
   display: inline-block;
 }
 
+#weather{
+  text-align: center;
+  border-radius: 20px;
+  background-color: grey;
+  justify-content: center;
+  
+}
+
 .quoteBox{
   background-color: grey; opacity: 0.75;
   text-align: center;
