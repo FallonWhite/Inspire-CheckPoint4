@@ -32,14 +32,18 @@ body {
   border-radius: 20px;
   background-color: grey;
   justify-content: center;
+  color: black;
+  text-shadow: 1px 1px white, 0 0 20px gray;
  
 }
 
 #weather{
   text-align: center;
   border-radius: 20px;
-  background-color: grey;
+  background-color: grey; opacity: 0.75;
   justify-content: center;
+  color: black;
+  text-shadow: 1px 1px white, 0 0 20px gray;
   
 }
 
