@@ -1,4 +1,16 @@
 /* BASIC STYLES HERE */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 130vh;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bolder;
+  font-size: larger;
+  background-image: url('https://bcw-sandbox.herokuapp.com/api/images');
+  background-position: center;
+  background-size: cover;
+}
+
 .rain {
   background-image: url('../img/rain.gif');
   background-position: center;
