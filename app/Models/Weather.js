@@ -13,7 +13,7 @@ export default class Weather {
     return `
     <div id="weather">
         <h4 class="m-0"><b>Weather: ${this.name}, ${this.description}</b></h4>
-        <h5>Fahrenheit: ${this.f} Celsius: ${this.c}</h5> 
+        <h5>${this.f}℉, ${this.c}℃</h5> 
     </div>
 `
   }
