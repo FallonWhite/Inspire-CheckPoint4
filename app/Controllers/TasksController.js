@@ -14,7 +14,8 @@ function _draw() {
 //Public
 export default class TasksController {
   constructor() {
-    ProxyState.on("tasks", _draw, saveState);
+    ProxyState.on("tasks", _draw);
+    ProxyState.on("tasks", saveState);
 
     loadState()
   }
@@ -25,7 +26,7 @@ export default class TasksController {
     let newTask = {
 
       // @ts-ignore
-      name: form.task.value,
+      name: form.addTask.value,
 
     }
     tasksService.addTask(newTask)
@@ -38,7 +39,7 @@ export default class TasksController {
   toggledTaskSelection(taskId) {
     console.log(taskId, ProxyState.tasks)
     const existingTask = ProxyState.tasks.find(t => t.id == taskId)
-    existingTask.checked = !existingTask.checked
+    task.checked = !task.checked
     tasksService.toggledTaskSelection()
   }
 

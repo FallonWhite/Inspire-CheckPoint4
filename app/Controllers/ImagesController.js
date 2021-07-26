@@ -2,7 +2,7 @@ import { ProxyState } from "../AppState.js";
 import { imagesService } from "../Services/ImagesService.js";
 
 function _draw() {
-    document.getElementById("image").style.backgroundImage = `url(${ProxyState.images.image})`
+    document.getElementById('image').style.backgroundImage = `url(${ProxyState.images.image})`
     console.log('draw ' + ProxyState.images)
 }
 
