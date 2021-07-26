@@ -11,18 +11,12 @@ export default class WeathersController {
 
     this.getWeather()
   }
+
   async getWeather() {
     try {
       await weathersService.getWeather()
     } catch (error) {
       console.log(error)
-    }
-  }
-  async getNewWeather() {
-    try {
-      await weathersService.getNewWeather()
-    } catch (error) {
-      console.error(error)
     }
   }
 
