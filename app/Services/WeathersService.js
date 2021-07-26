@@ -3,10 +3,16 @@ import Weather from "../Models/Weather.js";
 import { weatherApi } from "./AxiosService.js";
 
 class WeathersService {
-  async getNewWeather() {
-    const res = await weatherApi.get('')
+  async getWeather() {
+    let res = await weatherApi.get('')
     console.log(res.data)
-    ProxyState.weather = new Weather(res.data)
+    ProxyState.weathers = new Weather(res.data)
+  }
+
+  toggle() {
+    let c = document.getElementById('c');
+    let f = document.getElementById('f');
+
   }
 
 }

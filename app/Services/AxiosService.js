@@ -20,6 +20,6 @@ export const imagesApi = axios.create({
 })
 
 export const tasksApi = axios.create({
-  baseURL: 'https://bcw-sandbox.herokuapp.com/api/fallon/todo',
+  baseURL: 'https://bcw-sandbox.herokuapp.com/api/fallon/todos',
   timeout: 10000
 })

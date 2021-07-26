@@ -2,21 +2,34 @@ import { ProxyState } from "../AppState.js";
 import { weathersService } from "../Services/WeathersService.js";
 
 function _draw() {
-  document.getElementById('weather').innerHTML = ProxyState.weather.Template
+  document.getElementById('weather').innerHTML = ProxyState.weathers.Template
 }
 
 export default class WeathersController {
   constructor() {
-    ProxyState.on('weather', _draw)
+    ProxyState.on('weathers', _draw)
 
-    this.getNewWeather()
+    this.getWeather()
   }
-
+  async getWeather() {
+    try {
+      await weathersService.getWeather()
+    } catch (error) {
+      console.log(error)
+    }
+  }
   async getNewWeather() {
     try {
       await weathersService.getNewWeather()
     } catch (error) {
       console.error(error)
     }
+  }
+
+  async toggle() {
+    try {
+      weathersService.toggle()
+    } catch (error)
+      console.log(error)
   }
 }

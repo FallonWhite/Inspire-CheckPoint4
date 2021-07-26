@@ -12,10 +12,9 @@ export default class Task {
 
     get Template() {
         return `
-    <div class="${this.id}">
-    <input type="checkbox" class="m-2" onclick="app.tasksController.checkbox('${this.id}')" ${this.checked ? 'checked' : ''}>
-    ${this.name} 
-<button type="destroy" class="btn btn-dark btn-outline-info btn-sm my-1 ml-5 pull-right" onclick="app.tasksController.removeTask('${this.id}')">Delete</button>`
+        <div class="${this.id}">
+        <input type="checkbox" class="m-2" onclick="app.tasksController.checkbox('${this.id}')" ${this.checked ? 'checked' : ''}>${this.name} 
+        <button type="destroy" class="btn btn-dark btn-outline-info btn-sm my-1 ml-5 pull-right" onclick="app.tasksController.removeTask('${this.id}')">Delete</button>`
     }
 
     //to display task total//

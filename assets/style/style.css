@@ -13,12 +13,35 @@
 }
 
 #clock {
-  font-size: 25px;
-  width: 200px;
+  font-size: 60px;
+  width: 50px;
   text-align: center;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 20px;
   background-color: grey;
+  justify-content: center;
+  display: inline-block;
+}
+
+.quoteBox{
+  background-color: grey; opacity: 0.75;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 20px;
+  background-color: grey;
+  justify-content: center;
+  
+}
+
+.greeting{
+  background-color: grey; opacity: 0.75;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 20px;
+  background-color: grey;
+  justify-content: center;
+  color: black; 
+  text-shadow: 1px 1px white;
 }
 
 .quoteText{
