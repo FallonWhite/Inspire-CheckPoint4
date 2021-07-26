@@ -3,7 +3,7 @@ import { imagesService } from "../Services/ImagesService.js";
 
 function _draw() {
     document.getElementById("image").style.backgroundImage = `url(${ProxyState.images.image})`
-    console.log('draw ' + ProxyState.image)
+    console.log('draw ' + ProxyState.images)
 }
 
 export default class ImagesController {
@@ -16,7 +16,7 @@ export default class ImagesController {
         try {
             await imagesService.getImage()
         } catch (error) {
-            console.error(error)
+            console.log(error)
         }
     }
 }

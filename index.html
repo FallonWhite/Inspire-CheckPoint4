@@ -47,9 +47,9 @@
                         <p><i><b>Remaining Tasks:</b></i></p>
                     </div>
                     <div id="todo"></div>
-                    <form class="form d-flex p-2" onsubmit="app.tasksController.addTask(event)">
-                        <input type="text" name="description" class="form-control" placeholder="Enter a new task..."
-                            required minlength="" maxlength="">
+                    <form class="form d-flex p-2" onsubmit="app.tasksController.addTask()">
+                        <input type="text" name="task" class="form-control" placeholder="Enter a new task..." required
+                            minlength="" maxlength="">
                         <button class="btn btn-dark btn-outline-primary shadow-light ml-1 justify-content-center"
                             type="submit"><b>+</b></button>
                     </form>

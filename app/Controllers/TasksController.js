@@ -26,7 +26,7 @@ export default class TasksController {
 
       // @ts-ignore
       name: form.task.value,
-      checked: ""
+
     }
     tasksService.addTask(newTask)
     // @ts-ignore
