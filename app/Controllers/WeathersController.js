@@ -8,7 +8,6 @@ function _draw() {
 export default class WeathersController {
   constructor() {
     ProxyState.on('weathers', _draw)
-
     this.getWeather()
   }
 
@@ -16,14 +15,16 @@ export default class WeathersController {
     try {
       await weathersService.getWeather()
     } catch (error) {
-      console.log(error)
+      console.error(error)
     }
   }
 
   async toggle() {
     try {
       weathersService.toggle()
-    } catch (error)
-      console.log(error)
+    } catch (error) {
+      console.error(error)
+    }
   }
+
 }
