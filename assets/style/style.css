@@ -30,7 +30,7 @@
   border-radius: 20px;
   background-color: grey;
   justify-content: center;
-  
+  display: inline-block;
 }
 
 .greeting{
@@ -42,6 +42,7 @@
   justify-content: center;
   color: black; 
   text-shadow: 1px 1px white;
+  display: inline-block;
 }
 
 .quoteText{
