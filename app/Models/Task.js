@@ -27,6 +27,6 @@ export default class Task {
         if (!template) {
             template += "No tasks"
         }
-        return [template, tasksTotal]
+        return template
     }
 }
