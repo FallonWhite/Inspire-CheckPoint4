@@ -36,13 +36,13 @@ export default class TasksController {
 
 
   //NEED to get toggle to work. Boolean can't be 'string'. The below si a placeholder for the taskToggle//
-  toggledTaskSelection(taskId) {
+  /*toggledTaskSelection(taskId) {
     console.log(taskId, ProxyState.tasks)
     const existingTask = ProxyState.tasks.find(t => t.id == taskId)
     task.checked = !task.checked
     tasksService.toggledTaskSelection()
   }
-
+*/
   onPageLoad(id) {
     // @ts-ignore
     document.getElementById(id).checked = false
