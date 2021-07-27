@@ -6,7 +6,7 @@ export default class Task {
     constructor({ name, id = generateId() }) {
         this.id = id
         this.name = name
-        this.total = 1
+        this.tasksTotal = 1
         this.checked = localStorage.getItem(this.id)
     }
 
