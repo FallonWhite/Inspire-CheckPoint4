@@ -9,6 +9,7 @@ class App {
   imagesController = new ImagesController();
   weathersController = new WeathersController();
 
+
 }
 
 window["app"] = new App();
