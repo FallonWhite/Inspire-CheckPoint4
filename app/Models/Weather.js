@@ -12,7 +12,7 @@ export default class Weather {
 
     return `
     <div  id="weather">
-        <h4 class="m-1"><b>Weather: ${this.name}, ${this.description}, ${this.f}℉</b></h4>
+        <h4 class="m-1"><b><u>Weather in:</u> ${this.name}. <u>Condition:</u> ${this.description} <u>Temp:</u>${this.f}℉</b></h4>
         <button class="btn btn-black btn-outline-dark m-1" onclick="app.weatherController.getWeather('${this.c}')">${this.c}℃</button>
         <button class="btn btn-black btn-outline-dark m-1" onclick="app.weatherController.getWeather('${this.temp}')">${this.temp}°K</button>
 
