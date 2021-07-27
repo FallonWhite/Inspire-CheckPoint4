@@ -18,7 +18,6 @@ class TasksService {
   destroy(id) {
     ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
   }
-
   //need to figure out toggle feature//
   toggledTaskSelection(id) {
     ProxyState.tasks = [...ProxyState.tasks]
@@ -28,8 +27,6 @@ class TasksService {
     console.log(new Task(res.data))
   }
 
-
-  //update task to localStorage isn't working//
   updateTask(id) {
     if (localStorage.getItem(id) === 'checked') {
       localStorage.setItem(id, '')
